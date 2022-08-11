@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1053450326575",
+    "project_id": "juriquilla-b22cf",
+    "storage_bucket": "juriquilla-b22cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1053450326575:android:e442bd05f6da268f04acda",
+        "android_client_info": {
+          "package_name": "mx.linkom.caseta_juriquilla"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1053450326575-psh3e32am8sg6dl39s01v70sdtfeuc4h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEKeNEEVw9KUzYGO3nA2bbpdvqpVpedLk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1053450326575-psh3e32am8sg6dl39s01v70sdtfeuc4h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
