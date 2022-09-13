@@ -3,9 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/drawable/ic_salir.xml" value="0.2703125" />
+        <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/layout/activity_accesos.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/layout/activity_accesos_salidas.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/layout/activity_accesosgrupales.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/layout/activity_accesosgrupales_salidas.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/layout/activity_accesosmultiples.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/layout/activity_accesosmultiplessalidas.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/layout/activity_accesosregistro.xml" value="0.4" />
         <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/layout/activity_correspondencia.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/layout/activity_dashboard.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/layout/activity_escaneo_tbj.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/layout/activity_escaneo_trabajador_entrada.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/layout/activity_escaneo_trabajador_salida.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/layout/activity_preentradas.xml" value="0.264" />
         <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/layout/activity_preentradasgrupalqr.xml" value="0.25416666666666665" />
@@ -13,7 +23,10 @@
         <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/layout/activity_preentradasqr.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/layout/activity_recepcion.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/layout/activity_recepcionvisitas.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/layout/activity_visitasrecepentradasdetalle.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/layout/activity_visitasrecepsalidasdetalle.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/layout/dialog_signin.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Andrea/AndroidStudioProjects/CASETA/Caseta_Juriquilla/app/src/main/res/menu/menu_main.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

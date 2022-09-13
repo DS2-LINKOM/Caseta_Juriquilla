@@ -9,7 +9,11 @@ import android.util.Log;
 import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.View;
 import android.webkit.URLUtil;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.core.app.ActivityCompat;
@@ -41,7 +45,9 @@ public class EscaneoTrabajadorActivity extends mx.linkom.caseta_juriquilla.Menu 
     FloatingActionButton fabReiniciar;
     TextView tvRespusta;
     mx.linkom.caseta_juriquilla.Configuracion Conf;
-
+    EditText Codigo;
+    Button Buscar,Lector;
+    LinearLayout Qr,Qr2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +58,24 @@ public class EscaneoTrabajadorActivity extends mx.linkom.caseta_juriquilla.Menu 
         Conf.setST(null);
 
         cameraView = (SurfaceView) findViewById(R.id.camera_view);
+        Lector = (Button) findViewById(R.id.btnLector);
+        Codigo = (EditText) findViewById(R.id.editText);
+        Buscar = (Button) findViewById(R.id.btnBuscar);
+        Qr = (LinearLayout) findViewById(R.id.qr);
+        Qr2 = (LinearLayout) findViewById(R.id.qr2);
+        Buscar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CodigoTr();
+            }});
+        cameraView = (SurfaceView) findViewById(R.id.camera_view);
 
+        Lector.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Qr.setVisibility(View.VISIBLE);
+                Qr2.setVisibility(View.VISIBLE);
+            }});
 
         initQR();
 
@@ -197,6 +220,52 @@ public class EscaneoTrabajadorActivity extends mx.linkom.caseta_juriquilla.Menu 
         };
         requestQueue.add(stringRequest);
     }
+
+
+    public void CodigoTr() {
+        String url = "https://linkaccess2.kap-adm.mx/plataforma/casetaV2/controlador/juriquilla_access/tbj_php1.php?bd_name="+Conf.getBd()+"&bd_user="+Conf.getBdUsu()+"&bd_pwd="+Conf.getBdCon();
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+
+            @Override
+            public void onResponse(String response) {
+                Conf.setQR(Codigo.getText().toString().trim());
+
+                if(response.equals("error")){
+                    Conf.setST("Denegado");
+                    Intent i = new Intent(getApplicationContext(), mx.linkom.caseta_juriquilla.BitacoraTrabajadorActivity.class);
+                    startActivity(i);
+                    finish();
+                }else {
+                    response = response.replace("][",",");
+
+                    Conf.setST("Aceptado");
+                    Intent i = new Intent(getApplicationContext(), mx.linkom.caseta_juriquilla.BitacoraTrabajadorActivity.class);
+                    startActivity(i);
+                    finish();
+                }
+
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("Error ", "Id: " + error.toString());
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String, String> params = new HashMap<>();
+                params.put("Codigo", Codigo.getText().toString().trim());
+                params.put("id_residencial", Conf.getResid().trim());
+                return params;
+            }
+        };
+        requestQueue.add(stringRequest);
+    }
+
 
     @Override
     public void onBackPressed(){

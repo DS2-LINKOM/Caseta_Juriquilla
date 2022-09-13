@@ -22,7 +22,7 @@
 
     <item
         android:id="@+id/Cerrar"
-        android:icon="@drawable/ic_cerrar"
+        android:icon="@drawable/ic_salir"
         android:title="@string/Cerrar"
         app:showAsAction="ifRoom"
         />

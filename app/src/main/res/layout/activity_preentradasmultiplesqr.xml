@@ -272,45 +272,7 @@
                     android:background="@color/divider"
                     ></LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingBottom="12dp">
 
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:text="Comentarios:"
-                        android:layout_gravity="center"
-                        android:textColor="@color/fontColorGris"
-                        android:textSize="@dimen/fontSize"
-                        android:fontFamily="@font/fontNegritaC"
-                        />
-
-                    <customfonts.MyTextView
-                        android:id="@+id/setComentarios"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/fontColorNegro"
-                        android:textSize="@dimen/fontSize"
-                        />
-
-
-
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:background="@color/divider"
-                    ></LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -358,6 +320,46 @@
                             android:fontFamily="@font/fontNormalC"
                             />
                     </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divider"
+                    ></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Comentarios:"
+                        android:layout_gravity="center"
+                        android:textColor="@color/fontColorGris"
+                        android:textSize="@dimen/fontSize"
+                        android:fontFamily="@font/fontNegritaC"
+                        />
+
+                    <customfonts.MyEditText
+                        android:id="@+id/setComentarios"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/fontColorNegro"
+                        android:textSize="@dimen/fontSize"
+                        />
+
+
+
 
                 </LinearLayout>
                 <LinearLayout
