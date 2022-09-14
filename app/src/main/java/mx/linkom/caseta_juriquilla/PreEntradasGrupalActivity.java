@@ -62,7 +62,7 @@ public class PreEntradasGrupalActivity extends mx.linkom.caseta_juriquilla.Menu 
 
     LinearLayout rlPermitido, rlDenegado,rlVista;
     TextView  tvMensaje;
-    TextView Nombre,Dire,Visi,Tipo,Comentarios;
+    TextView Nombre,Dire,Visi,Tipo;
 
     EditText Placas;
     Spinner Pasajeros;
@@ -84,6 +84,7 @@ public class PreEntradasGrupalActivity extends mx.linkom.caseta_juriquilla.Menu 
     TextView nombre_foto1,nombre_foto2,nombre_foto3;
     Uri uri_img,uri_img2,uri_img3;
     int fotos1,fotos2,fotos3;
+    EditText Comentarios;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,7 +95,7 @@ public class PreEntradasGrupalActivity extends mx.linkom.caseta_juriquilla.Menu 
         storage= FirebaseStorage.getInstance();
         storageReference=storage.getReference();
         names = new ArrayList<String>();
-        Comentarios = (TextView)findViewById(R.id.setComentarios);
+        Comentarios = (EditText)findViewById(R.id.setComentarios);
 
         reg1 = (Button) findViewById(R.id.reg1);
         reg2 = (Button) findViewById(R.id.reg2);
@@ -1151,6 +1152,7 @@ public class PreEntradasGrupalActivity extends mx.linkom.caseta_juriquilla.Menu 
                         params.put("correo",ja2.getString(6).trim());
                         params.put("visita",ja1.getString(7).trim());
                         params.put("nom_residencial",Conf.getNomResi().trim());
+                        params.put("comentarios",Comentarios.getText().toString().trim());
 
                     } catch (JSONException e) {
                         Log.e("TAG","Error: " + e.toString());

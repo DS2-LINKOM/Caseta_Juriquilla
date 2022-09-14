@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -45,7 +46,7 @@ public class AccesosMultiplesSalidasActivity extends mx.linkom.caseta_juriquilla
 
     LinearLayout rlPermitido, rlDenegado,rlVista,ContinuarBoton;
     TextView  tvMensaje;
-    TextView Nombre,Dire,Visi,Pasajeros,Placas,Tipo,Comentarios;
+    TextView Nombre,Dire,Visi,Pasajeros,Placas,Tipo;
 
     ArrayList<String> names;
     JSONArray ja1,ja2,ja3,ja4,ja5,ja6;
@@ -57,6 +58,7 @@ public class AccesosMultiplesSalidasActivity extends mx.linkom.caseta_juriquilla
     TextView nombre_foto1,nombre_foto2,nombre_foto3;
     LinearLayout Foto1, Foto2,Foto3,Foto1View,Foto2View,Foto3View,espacio2,espacio3,espacio4,espacio5,espacio6,espacio8,espacio9,espacio10;
     LinearLayout PlacasL;
+    EditText Comentarios;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +70,7 @@ public class AccesosMultiplesSalidasActivity extends mx.linkom.caseta_juriquilla
         storageReference=storage.getReference();
         names = new ArrayList<String>();
 
-        Comentarios = (TextView)findViewById(R.id.setComentarios);
+        Comentarios = (EditText)findViewById(R.id.setComentarios);
         PlacasL = (LinearLayout) findViewById(R.id.PlacasL);
         Foto1 = (LinearLayout) findViewById(R.id.Foto1);
         Foto2 = (LinearLayout) findViewById(R.id.Foto2);
@@ -776,6 +778,8 @@ public class AccesosMultiplesSalidasActivity extends mx.linkom.caseta_juriquilla
                     params.put("visita",ja1.getString(7).trim());
                     params.put("nom_residencial",Conf.getNomResi().trim());
 
+                    params.put("id_visita", ja1.getString(0).trim());
+                    params.put("comentarios",Comentarios.getText().toString().trim());
 
 
                 } catch (JSONException e) {

@@ -83,6 +83,8 @@ public class AccesoRegistroActivity extends mx.linkom.caseta_juriquilla.Menu {
     Uri uri_img,uri_img2,uri_img3;
     LinearLayout Numero_o,Lote_o,registro;
     String Dire;
+    EditText Comentarios;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,6 +93,7 @@ public class AccesoRegistroActivity extends mx.linkom.caseta_juriquilla.Menu {
 
         storage= FirebaseStorage.getInstance();
         storageReference=storage.getReference();
+        Comentarios = (EditText)findViewById(R.id.setComentarios);
 
         reg1 = (Button) findViewById(R.id.reg1);
         reg2 = (Button) findViewById(R.id.reg2);
@@ -937,6 +940,7 @@ public class AccesoRegistroActivity extends mx.linkom.caseta_juriquilla.Menu {
                         params.put("token", ja4.getString(5).trim());
                         params.put("correo",ja4.getString(4).trim());
                         params.put("nom_residencial",Conf.getNomResi().trim());
+                        params.put("comentarios",Comentarios.getText().toString().trim());
 
 
                     } catch (JSONException e) {

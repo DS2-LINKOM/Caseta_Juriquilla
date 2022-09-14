@@ -63,7 +63,7 @@ public class AccesosGrupalActivity extends mx.linkom.caseta_juriquilla.Menu {
 
     LinearLayout rlPermitido, rlDenegado,rlVista;
     TextView  tvMensaje;
-    TextView Nombre,Dire,Visi,Tipo,Comentarios;
+    TextView Nombre,Dire,Visi,Tipo;
 
     EditText Placas;
     Spinner Pasajeros;
@@ -88,6 +88,8 @@ public class AccesosGrupalActivity extends mx.linkom.caseta_juriquilla.Menu {
     RadioButton si,no;
     TextView dato;
     LinearLayout CPlacasTexto;
+    EditText Comentarios;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -97,6 +99,7 @@ public class AccesosGrupalActivity extends mx.linkom.caseta_juriquilla.Menu {
         storage= FirebaseStorage.getInstance();
         storageReference=storage.getReference();
         names = new ArrayList<String>();
+        Comentarios = (EditText)findViewById(R.id.setComentarios);
 
         reg1 = (Button) findViewById(R.id.reg1);
         reg2 = (Button) findViewById(R.id.reg2);
@@ -135,7 +138,6 @@ public class AccesosGrupalActivity extends mx.linkom.caseta_juriquilla.Menu {
         Foto2 = (LinearLayout) findViewById(R.id.Foto2);
         Foto3 = (LinearLayout) findViewById(R.id.Foto3);
 
-        Comentarios = (TextView)findViewById(R.id.setComentarios);
         Nombre = (TextView)findViewById(R.id.setNombre);
         Tipo = (TextView)findViewById(R.id.setTipo);
         Dire = (TextView)findViewById(R.id.setDire);
@@ -1087,6 +1089,8 @@ public class AccesosGrupalActivity extends mx.linkom.caseta_juriquilla.Menu {
                         params.put("correo",ja2.getString(6).trim());
                         params.put("visita",ja1.getString(7).trim());
                         params.put("nom_residencial",Conf.getNomResi().trim());
+
+                        params.put("comentarios",Comentarios.getText().toString().trim());
 
                     } catch (JSONException e) {
                         Log.e("TAG","Error: " + e.toString());

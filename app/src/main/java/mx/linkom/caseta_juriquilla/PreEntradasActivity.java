@@ -83,6 +83,7 @@ public class PreEntradasActivity extends mx.linkom.caseta_juriquilla.Menu {
     Uri uri_img,uri_img2,uri_img3;
     LinearLayout Lote_o,registro;
     String Dire;
+    EditText Comentarios;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,6 +94,7 @@ public class PreEntradasActivity extends mx.linkom.caseta_juriquilla.Menu {
 
         storage= FirebaseStorage.getInstance();
         storageReference=storage.getReference();
+        Comentarios = (EditText)findViewById(R.id.setComentarios);
 
         reg1 = (Button) findViewById(R.id.reg1);
         reg2 = (Button) findViewById(R.id.reg2);
@@ -728,6 +730,7 @@ public class PreEntradasActivity extends mx.linkom.caseta_juriquilla.Menu {
     public void Datos(){
         try {
             Nombre.setText(ja5.getString(7));
+            Comentarios.setText(ja5.getString(9));
 
             if(ja5.getString(4).equals("1") || ja5.getString(4).equals("0")){
                 visi.setChecked(true);
@@ -1028,8 +1031,7 @@ public class PreEntradasActivity extends mx.linkom.caseta_juriquilla.Menu {
                         params.put("correo",ja4.getString(4).trim());
                         params.put("nom_residencial",Conf.getNomResi().trim());
 
-
-
+                        params.put("comentarios",Comentarios.getText().toString().trim());
                     } catch (JSONException e) {
                         Log.e("TAG","Error: " + e.toString());
                     }
