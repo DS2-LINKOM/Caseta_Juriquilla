@@ -98,7 +98,7 @@ public class AccesosActivity extends mx.linkom.caseta_juriquilla.Menu {
         Conf = new mx.linkom.caseta_juriquilla.Configuracion(this);
         storage= FirebaseStorage.getInstance();
         storageReference=storage.getReference();
-        names = new ArrayList<String>();
+        names = new ArrayList<String>(); 
         Comentarios = (EditText)findViewById(R.id.setComentarios);
 
         reg1 = (Button) findViewById(R.id.reg1);
